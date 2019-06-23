@@ -1,0 +1,33 @@
+Kruskal's Algorithm for Minimum Spanning Tree
+
+kruskal(G)// T – Result Minimum Spanning Tree
+ T?? // build empty tree
+ // build groups: the group contains only one vertex
+ for each vertex v
+?
+V[G]
+ makeSet(v)
+ end-for
+ //sort the edges of E into non-decreasing order by weight
+ sort(E)
+ for each edge (u,v)
+?
+E
+ if (set(u) != set(v))
+ T?T?{(u,v)}
+ union(u,v)
+ end-if
+ end-for
+end kruskal
+union(U,V) //O(n^2)na?ve union
+ for each vertex i
+?
+V[G]
+ if (set[i] == set[v])
+ set[i] = set[u]
+ end-if
+ end-for
+end UNION
+makeSet (v)
+ set[v] = v
+end makeSet 

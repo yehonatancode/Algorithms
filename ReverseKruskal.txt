@@ -1,0 +1,18 @@
+Reverse Kruskal's Algorithm for Minimum Spanning Tree
+
+//n = |V| - number of vertices
+//m = |E| - number of edges
+mstErasingEdges(G)
+sortDecreasing(E)
+Edge T[] ? E
+i = 0
+while (i<m-(n-1))
+e = T[i]
+T.delete(e) //erase edge
+if (T is disconnected) (BFS || DFS)
+T[i++] = e // return the edge to the graph
+// and move to the next edge
+end-if
+end-while
+return T
+end-mstErasingEdges

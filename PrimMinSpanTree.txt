@@ -1,0 +1,25 @@
+Prim pseudo code
+Prim(G, root)
+Edge T[n-1]<-empty tree (array of edges)
+numEdges = 0
+for each v in V(G, root) //O(n)
+ visited[v] = false
+ key[v] = infinity
+ parent(v) = NIL
+end-for
+key[root] = 0
+Q <- V(G)// Q Min Heap, Q keyed by key[v] //O(n)
+while (Q != empty && numEdges<n-1)
+ u = Q.extractMin() //O(log2(n))
+ for each v in Adj(u)
+ if (visited[v]==false && key]v[ > weight(u,v))
+key]v[ = weight (u,v)
+parent ]v[ = u
+Q.decreaseKey(v, weight(u,v)) //O(log2(n))
+ end-if
+ end-for
+ visited[u] = true
+ x=Q.getMin()
+ T[numEdges++]=(parent[x], x)
+end-while
+end-Prim
