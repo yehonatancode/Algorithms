@@ -1,0 +1,20 @@
+EulerCycle(G)
+v//arbitrary vertex
+Stack st;
+Vector C;
+st.push(v)
+while(st!=isEmpty())
+v=st.peek();
+if(deg[v]==0)
+C.add(v)
+st.pop()
+else
+u=G[v].element[0]
+st.push(u)
+G[V].delete(u)
+G[V].delete(v)
+deg[v]--
+deg[u]--
+end if
+end while
+return C
